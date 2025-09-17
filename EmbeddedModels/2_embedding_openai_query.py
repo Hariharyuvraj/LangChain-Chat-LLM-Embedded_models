@@ -5,13 +5,9 @@ load_dotenv()
 
 OPENAI_API_KEY = "Paste your openai api key here"
 
-# print(OPENAI_API_KEY)
-
 embedding = OpenAIEmbeddings(model='text-embedding-3-large', dimensions=20, api_key = OPENAI_API_KEY)
 
-list = embedding.embed_query("my name is yuvraj")
+result = embedding.embed_query("baramati is the big city")
 
-print(len(list))
-print(list)
-
-# By using this above code we can convert the query into the enbedding vector.
+print(str(result))
+print(len(result))
